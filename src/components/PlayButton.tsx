@@ -19,7 +19,11 @@ const PlayButton = ({
       onClick={handleRunVisualizer}
       className="disabled:pointer-events-none disabled:opacity-50 transition ease-in rounded-full p-2.5 shadow-md bg-green-500 hover:bg-green-600 border-none active:ring-green-300 focus:outline-none focus:ring focus:ring-green-300 focus:ring-opacity-30"
     >
-      {isGraphVisualized ? <GrPowerReset /> : <BsFillPlayFill />}
+      {isGraphVisualized ? (
+        <GrPowerReset data-testid="reset-icon" />
+      ) : (
+        <BsFillPlayFill data-testid="play-icon" />
+      )}
     </button>
   );
 };
