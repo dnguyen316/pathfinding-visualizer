@@ -61,6 +61,7 @@ const Nav = ({ isVisualizationRunningRef }: NavPropsInterface) => {
 
   const handleRunVisualizer = () => {
     if (isGraphVisualized) {
+      setMaze("NONE");
       setIsGraphVisualized(false);
       resetGrid({ grid: grid.slice(), startTile, endTile });
       return;
