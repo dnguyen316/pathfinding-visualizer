@@ -58,7 +58,7 @@ const Grid = ({ isVisualizationRunningRef }: GridPropsInterface) => {
       )}
     >
       {grid.map((row, index) => (
-        <div key={index} className="flex">
+        <div key={index} className="flex" role="row">
           {row.map((tile, tileIndex) => {
             const { row, col, isEnd, isStart, isPath, isVisited, isWall } =
               tile;
