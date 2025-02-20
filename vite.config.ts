@@ -13,7 +13,9 @@ export default defineConfig({
   test: {
     includeSource: ["src/**/*.{ts,tsx}"],
     environment: "jsdom",
-    setupFiles: ["./vitest-setup.js"],
+    setupFiles: ["./vitest-setup.ts"],
+    globals: true,
   },
   plugins: [react()],
+  base: "/path-finding-visualizer",
 });
