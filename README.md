@@ -1,50 +1,107 @@
-# React + TypeScript + Vite
+# Pathfinding Visualizer
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A dynamic web application that visualizes various pathfinding algorithms, enabling users to understand and compare their performance in real-time.
 
-Currently, two official plugins are available:
+## Table of Contents
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- [Features](#features)
+- [Tech Stack](#tech-stack)
+- [Installation](#installation)
+- [Usage](#usage)
+- [Project Structure](#project-structure)
+- [Contributing](#contributing)
+- [License](#license)
 
-## Expanding the ESLint configuration
+## Features
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+- **Algorithm Visualization:** Demonstrates how different path finding algorithms traverse grids to find optimal paths.
+- **Interactive Interface:** Users can draw obstacles, and watch algorithms in action.
 
-- Configure the top-level `parserOptions` property like this:
+## Tech Stack
 
-```js
-export default tseslint.config({
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
+- **Frontend Framework:** React
+- **Language:** TypeScript
+- **Bundler:** Vite
+- **Styling:** Tailwind CSS
+- **Linting:** ESLint
+
+## Installation
+
+To set up the project locally:
+
+1. **Clone the repository:**
+
+   ```bash
+   git clone https://github.com/dnguyen316/pathfinding-visualizer.git
+   ```
+
+2. **Navigate to the project directory:**
+
+   ```bash
+    cd pathfinding-visualizer
+   ```
+
+3. **Install dependencies:**
+
+   ```bash
+    npm install
+   ```
+
+4. **Start the development server:**
+
+   ```bash
+   npm run dev
+   ```
+
+# Usage
+
+- Draw Obstacles: Click and drag to create barriers that the algorithms must navigate around.
+- Select Algorithm: Choose from a list of path finding algorithms to visualize.
+- Run Visualization: Click the 'Start' button to see the selected algorithm in action.
+
+# Project Structure
+
+The project follows a straightforward structure. Here’s an overview:
+
+```graphql
+pathfinding-visualizer/
+├── .github/               # GitHub-specific configurations (e.g., workflows)
+├── dist/                  # Compiled and built files (generated after running build)
+├── node_modules/          # Installed dependencies (ignored in Git)
+├── public/                # Public static assets
+│   ├── vite.svg           # Static asset example
+├── src/                   # Source code
+│   ├── assets/            # Static assets like images or icons
+│   ├── components/        # Reusable UI components for the application
+│   ├── context/           # React Context API for global state management
+│   ├── hooks/             # Custom React hooks
+│   ├── lib/               # Core logic and helper utilities
+│   ├── utils/             # General utility functions
+│   ├── App.css            # Main app styles
+│   ├── App.tsx            # Root application component
+│   ├── index.css          # Global styling file
+│   ├── main.tsx           # Entry point of the application
+│   ├── vite-env.d.ts      # Vite environment type definitions
+├── .gitignore             # Specifies files/folders to ignore in Git
+├── eslint.config.js       # ESLint configuration for code linting
+├── index.html             # Main HTML template file
+├── package-lock.json      # Dependency lock file
+├── package.json           # Project metadata, dependencies, and scripts
+├── postcss.config.js      # PostCSS configuration (used with Tailwind CSS)
+├── README.md              # Project documentation
+├── tailwind.config.js     # Tailwind CSS configuration
+├── tsconfig.app.json      # TypeScript configuration specific to the app
+├── tsconfig.node.json     # TypeScript configuration for Node.js
+├── tsconfig.node.tsbuildinfo # Build info for incremental TypeScript compilation
+├── tsconfig.app.tsbuildinfo  # Build info for incremental TypeScript compilation
+├── vite.config.ts         # Vite configuration file
+└── tsconfig.json        # TypeScript configuration
 ```
 
-- Replace `tseslint.configs.recommended` to `tseslint.configs.recommendedTypeChecked` or `tseslint.configs.strictTypeChecked`
-- Optionally add `...tseslint.configs.stylisticTypeChecked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and update the config:
+# License
 
-```js
-// eslint.config.js
-import react from 'eslint-plugin-react'
+This project is licensed under the MIT License. See the LICENSE file for details.
 
-export default tseslint.config({
-  // Set the react version
-  settings: { react: { version: '18.3' } },
-  plugins: {
-    // Add the react plugin
-    react,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended rules
-    ...react.configs.recommended.rules,
-    ...react.configs['jsx-runtime'].rules,
-  },
-})
+```pgsql
+  Feel free to update or adjust any sections as needed to better fit your project's specifics.
 ```
