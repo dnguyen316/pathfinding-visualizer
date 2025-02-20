@@ -17,5 +17,5 @@ export default defineConfig({
     globals: true,
   },
   plugins: [react()],
-  base: "/pathfinding-visualizer",
+  base: "/pathfinding-visualizer/",
 });
