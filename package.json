@@ -1,6 +1,6 @@
 {
   "name": "pathfinding-visualizer",
-  "private": true,
+  "homepage": "https://dnguyen316.github.io/pathfinding-visualizer/",
   "version": "0.0.0",
   "type": "module",
   "scripts": {
